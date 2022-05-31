@@ -24,6 +24,27 @@ public class Regras {
     private final String INFORMACAO_ACESSAR = "informacao:acessar";
 
     /**
+     * Regras de Acesso -> Informações do Servidor
+     */
+    @Getter
+    @AgruparRegras("usuario")
+    private final String USUARIO_ACESSAR = "usuario:acessar";
+
+    @Getter
+    @AgruparRegras("usuario")
+    private final String USUARIO_CADASTRAR = "usuario:cadastrar";
+
+    @Getter
+    @AgruparRegras("usuario")
+    private final String USUARIO_EDITAR = "usuario:editar";
+
+    @Getter
+    @AgruparRegras("usuario")
+    private final String USUARIO_EXCLUIR = "usuario:excluir";
+
+
+
+    /**
      *
      * @return
      */

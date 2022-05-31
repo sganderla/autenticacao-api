@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 @RequestMapping("/api/informacoes")
+/** @PreAuthorize("isAuthenticated()") */
 public class InformacaoController {
 
     /**
@@ -24,15 +25,6 @@ public class InformacaoController {
     @GetMapping("/sem")
     public ResponseEntity<String> semPermissao(){
         return new ResponseEntity<String>("Acesso sem login", HttpStatus.OK);
-    }
-
-    /**
-     *
-     * @return
-     */
-    @GetMapping("/semdois")
-    public ResponseEntity<String> semDoisPermissao(){
-        return new ResponseEntity<String>("Acesso sem dois login", HttpStatus.OK);
     }
 
     /**
